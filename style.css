@@ -698,3 +698,321 @@ button:focus-visible {
         animation-duration: 0.01ms !important;
     }
 }
+
+/* Portada con fotografía */
+.hero-photo {
+    background-image:
+        linear-gradient(
+            180deg,
+            rgba(10, 13, 9, 0.05) 30%,
+            rgba(10, 13, 9, 0.85) 100%
+        ),
+        url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=85");
+    background-size: cover;
+    background-position: center;
+    background-color: #22261f;
+}
+
+.hero-photo::before,
+.hero-photo::after {
+    display: none;
+}
+
+.hero-photo .hero-decoration {
+    display: none;
+}
+
+.hero-photo .hero-card {
+    right: 7%;
+    bottom: 9%;
+}
+
+.hero-badge {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 10px 13px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 8px;
+    background: rgba(16, 18, 15, 0.75);
+    color: #f5f6f0;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    backdrop-filter: blur(10px);
+}
+
+.hero-badge-dot {
+    width: 8px;
+    height: 8px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #c4f45d;
+}
+
+@media (max-width: 700px) {
+    .hero-photo {
+        min-height: 380px;
+        background-position: center;
+    }
+
+    .hero-badge {
+        top: 16px;
+        left: 16px;
+        font-size: 0.6rem;
+    }
+
+    .hero-photo .hero-card {
+        right: 16px;
+        bottom: 16px;
+    }
+}
+
+/* ========================================
+   MEJORAS VISUALES: PLANES
+======================================== */
+
+.plans {
+    position: relative;
+    overflow: hidden;
+}
+
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    align-items: stretch;
+    margin-top: 48px;
+}
+
+.plan-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 32px 28px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    background: #171a15;
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.plan-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(196, 244, 93, 0.5);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
+}
+
+.plan-card.plan-featured {
+    border-color: #c4f45d;
+    background: linear-gradient(
+        160deg,
+        rgba(196, 244, 93, 0.09),
+        #171a15 45%
+    );
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+}
+
+.plan-label {
+    margin: 0 0 18px;
+    color: #c4f45d;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.plan-card h3 {
+    margin: 0 0 14px;
+    color: #f5f6f0;
+    font-size: 1.5rem;
+    line-height: 1.25;
+}
+
+.plan-description {
+    margin: 0;
+    color: #a6aaa0;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.plan-price {
+    margin: 24px 0;
+    padding: 18px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.plan-price span {
+    color: #c4f45d;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.plan-card ul {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 0 0 30px;
+    padding: 0;
+    list-style: none;
+}
+
+.plan-card li {
+    position: relative;
+    padding-left: 25px;
+    color: #d0d3ca;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.plan-card li::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #c4f45d;
+    content: "✓";
+    font-weight: 800;
+}
+
+.plan-card .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 48px;
+    margin-top: auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* TABLETS */
+@media (max-width: 950px) {
+    .plans-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .plan-card.plan-featured {
+        grid-column: auto;
+    }
+}
+
+/* CELULARES */
+@media (max-width: 650px) {
+    .plans-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-top: 32px;
+    }
+
+    .plan-card {
+        padding: 26px 22px;
+    }
+
+    .plan-card:hover {
+        transform: none;
+    }
+}
+
+/* ACCESIBILIDAD: MENOS ANIMACIONES */
+@media (prefers-reduced-motion: reduce) {
+    .plan-card {
+        transition: none;
+    }
+}
+css
+/* FORMULARIO DE CONTACTO */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 520px;
+    margin: 32px auto 0;
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: #f5f6f0;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 10px;
+    background: #171a15;
+    color: #f5f6f0;
+    font: inherit;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #858a7f;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #c4f45d;
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact-form button {
+    width: 100%;
+    cursor: pointer;
+    font: inherit;
+}
+
+.contact-note {
+    margin-top: 24px;
+    color: #858a7f;
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    .contact-form {
+        gap: 16px;
+    }
+}
+
+.form-group input {
+    color-scheme: dark;
+}
+
+.form-group input:-webkit-autofill,
+.form-group input:-webkit-autofill:hover,
+.form-group input:-webkit-autofill:focus {
+    -webkit-text-fill-color: #f5f6f0;
+    -webkit-box-shadow: 0 0 0 1000px #171a15 inset;
+    transition: background-color 9999s ease-out;
+}
