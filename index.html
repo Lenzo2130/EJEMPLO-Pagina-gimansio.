@@ -4,33 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta name="description" content="Entrenamiento personalizado para alcanzar tus objetivos. Planes adaptados a vos.">
-
     <meta name="theme-color" content="#10120f">
-
-    <title>Impulso Fitness | Entrenamiento Personalizado</title>
-
+    <meta name="color-scheme" content="dark">
+    <title>Impulso Fitness | Entrenamiento personalizado</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="config.js" defer></script>
     <script src="script.js" defer></script>
 </head>
-
 <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
     <header class="header">
-        <a href="#inicio" class="logo">IMPULSO<span>.</span></a>
+        <a href="#inicio" class="logo" aria-label="Ir al inicio">
+            <span class="business-name">Impulso Fitness</span><span class="logo-dot">.</span>
+        </a>
 
-        <button
-            class="menu-toggle"
-            id="menu-toggle"
-            aria-label="Abrir menú"
-            aria-expanded="false"
-            aria-controls="nav"
-        >
-            ☰
-        </button>
+        <button class="menu-toggle" id="menu-toggle"
+            aria-label="Abrir menú" aria-expanded="false"
+            aria-controls="nav" type="button">☰</button>
 
-        <nav class="nav" id="nav">
+        <nav class="nav" id="nav" aria-label="Navegación principal">
             <a href="#inicio">Inicio</a>
             <a href="#servicios">Servicios</a>
             <a href="#planes">Planes</a>
@@ -39,337 +36,210 @@
         </nav>
     </header>
 
-    <main>
-
-        <!-- PORTADA -->
+    <main id="contenido">
         <section class="hero" id="inicio">
-
             <div class="hero-content">
                 <p class="eyebrow">ENTRENAMIENTO PERSONALIZADO</p>
-
-                <h1>Construí tu mejor versión<span>.</span></h1>
-
-                <p class="hero-description">
-                    Entrená con un plan diseñado para vos.
-                    Mejorá tu fuerza, ganá confianza y avanzá
-                    a tu propio ritmo.
+                <h1 id="hero-title">Construí tu mejor versión<span>.</span></h1>
+                <p class="hero-description" id="hero-description">
+                    Entrená con un plan diseñado para vos. Mejorá tu fuerza,
+                    ganá confianza y avanzá a tu propio ritmo.
                 </p>
 
                 <div class="hero-actions">
-                    <a href="#contacto" class="button button-primary">
-                        Empezar ahora
-                    </a>
-
-                    <a href="#servicios" class="button button-secondary">
-                        Conocer servicios
-                    </a>
+                    <a href="#contacto" class="button button-primary">Empezar ahora</a>
+                    <a href="#servicios" class="button button-secondary">Conocer servicios</a>
                 </div>
 
                 <div class="hero-stats">
-                    <div>
-                        <strong>100%</strong>
-                        <span>Personalizado</span>
-                    </div>
-
-                    <div>
-                        <strong>A tu ritmo</strong>
-                        <span>Progreso sostenible</span>
-                    </div>
-
-                    <div>
-                        <strong>Tu objetivo</strong>
-                        <span>Tu entrenamiento</span>
-                    </div>
+                    <div><strong>100%</strong><span>Personalizado</span></div>
+                    <div><strong>A tu ritmo</strong><span>Progreso sostenible</span></div>
+                    <div><strong>Tu objetivo</strong><span>Tu entrenamiento</span></div>
                 </div>
             </div>
 
-            <!-- IMAGEN PRINCIPAL -->
-            <div class="hero-visual hero-photo">
+            <div class="hero-visual hero-photo" role="img"
+                aria-label="Fotografía de un gimnasio">
                 <div class="hero-overlay"></div>
-
                 <div class="hero-card">
                     <div class="hero-number">01</div>
                     <p>CONSTANCIA</p>
                     <span>El progreso empieza con una decisión.</span>
                 </div>
-
                 <div class="hero-badge">
                     <span class="hero-badge-dot"></span>
                     ENTRENAMIENTO PERSONALIZADO
                 </div>
             </div>
-
         </section>
 
-        <!-- SERVICIOS -->
         <section class="services section" id="servicios">
-
             <div class="section-heading">
                 <p class="eyebrow">QUÉ PODEMOS HACER</p>
-                <h2>Entrenamiento para tus objetivos.</h2>
-                <p>
-                    Un enfoque claro, adaptado a tu experiencia
-                    y disponibilidad.
+                <h2 id="services-title">Entrenamiento para tus objetivos.</h2>
+                <p id="services-description">
+                    Un enfoque claro, adaptado a tu experiencia y disponibilidad.
                 </p>
             </div>
 
             <div class="services-grid">
-
                 <article class="service-card">
                     <div class="service-icon">01</div>
-
-                    <h3>Fuerza y musculación</h3>
-
-                    <p>
-                        Una rutina organizada para trabajar la fuerza
-                        y desarrollar masa muscular progresivamente.
-                    </p>
+                    <h3 id="servicio1-titulo">Fuerza y musculación</h3>
+                    <p id="servicio1-descripcion">Una rutina organizada para trabajar la fuerza y desarrollar masa muscular progresivamente.</p>
                 </article>
-
                 <article class="service-card">
                     <div class="service-icon">02</div>
-
-                    <h3>Acondicionamiento físico</h3>
-
-                    <p>
-                        Mejorá tu resistencia y capacidad física
-                        con sesiones adaptadas a tu nivel.
-                    </p>
+                    <h3 id="servicio2-titulo">Acondicionamiento físico</h3>
+                    <p id="servicio2-descripcion">Mejorá tu resistencia y capacidad física con sesiones adaptadas a tu nivel.</p>
                 </article>
-
                 <article class="service-card">
                     <div class="service-icon">03</div>
-
-                    <h3>Seguimiento personal</h3>
-
-                    <p>
-                        Revisá tus avances y ajustá el entrenamiento
-                        según tus objetivos y progreso.
-                    </p>
+                    <h3 id="servicio3-titulo">Seguimiento personal</h3>
+                    <p id="servicio3-descripcion">Revisá tus avances y ajustá el entrenamiento según tus objetivos y progreso.</p>
                 </article>
-
             </div>
         </section>
 
-        <!-- PLANES -->
         <section class="plans section" id="planes">
-
             <div class="section-heading">
                 <p class="eyebrow">ELEGÍ TU MODALIDAD</p>
                 <h2>Tu objetivo. Tu plan.</h2>
-                <p>
-                    Opciones flexibles para encontrar el entrenamiento
-                    adecuado para vos.
-                </p>
+                <p>Opciones flexibles para encontrar el entrenamiento adecuado para vos.</p>
             </div>
 
             <div class="plans-grid">
-
-                <!-- PLAN INICIAL -->
                 <article class="plan-card">
-
                     <p class="plan-label">PARA EMPEZAR</p>
-
                     <h3>Plan inicial</h3>
-
-                    <p class="plan-description">
-                        Organizá tus entrenamientos y empezá a trabajar
-                        por tus objetivos.
-                    </p>
-
-                    <div class="plan-price">
-                        <span>Precio a consultar</span>
-                    </div>
-
+                    <p class="plan-description">Organizá tus entrenamientos y empezá a trabajar por tus objetivos.</p>
+                    <div class="plan-price"><span id="precio-inicial">Consultar precio</span></div>
                     <ul>
                         <li>Evaluación de objetivos</li>
                         <li>Rutina personalizada</li>
                         <li>Guía para comenzar</li>
                     </ul>
-
-                    <a
-                        href="https://wa.me/5491112345678?text=Hola%2C%20quiero%20consultar%20por%20el%20Plan%20Inicial"
-                        class="button button-secondary"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Consultar plan
+                    <a href="#" class="button button-primary whatsapp-link"
+                        data-plan="Plan inicial" target="_blank" rel="noopener noreferrer">
+                        Elegir este plan
                     </a>
-
                 </article>
 
-                <!-- PLAN PERSONALIZADO -->
                 <article class="plan-card plan-featured">
-
                     <p class="plan-label">MÁS COMPLETO</p>
-
                     <h3>Plan personalizado</h3>
-
-                    <p class="plan-description">
-                        Para quienes buscan continuidad y seguimiento
-                        de sus avances.
-                    </p>
-
-                    <div class="plan-price">
-                        <span>Precio a consultar</span>
-                    </div>
-
+                    <p class="plan-description">Para quienes buscan continuidad y seguimiento de sus avances.</p>
+                    <div class="plan-price"><span id="precio-personalizado">Consultar precio</span></div>
                     <ul>
                         <li>Rutina adaptada a tus objetivos</li>
                         <li>Seguimiento del progreso</li>
                         <li>Ajustes periódicos</li>
                         <li>Orientación personalizada</li>
                     </ul>
-
-                    <a
-                        href="https://wa.me/5491112345678?text=Hola%2C%20quiero%20consultar%20por%20el%20Plan%20Personalizado"
-                        class="button button-primary"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <a href="#" class="button button-primary whatsapp-link"
+                        data-plan="Plan personalizado" target="_blank" rel="noopener noreferrer">
                         Elegir este plan
                     </a>
-
                 </article>
 
-                <!-- PLAN ONLINE -->
                 <article class="plan-card">
-
                     <p class="plan-label">ENTRENÁ DONDE QUIERAS</p>
-
                     <h3>Plan online</h3>
-
-                    <p class="plan-description">
-                        Seguí una planificación desde tu casa
-                        o el gimnasio que prefieras.
-                    </p>
-
-                    <div class="plan-price">
-                        <span>Precio a consultar</span>
-                    </div>
-
+                    <p class="plan-description">Seguí una planificación desde tu casa o el gimnasio que prefieras.</p>
+                    <div class="plan-price"><span id="precio-online">Consultar precio</span></div>
                     <ul>
                         <li>Planificación a distancia</li>
                         <li>Material de consulta</li>
                         <li>Seguimiento acordado</li>
                     </ul>
-
-                    <a
-                        href="https://wa.me/5491112345678?text=Hola%2C%20quiero%20consultar%20por%20el%20Plan%20Online"
-                        class="button button-secondary"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Consultar plan
+                    <a href="#" class="button button-primary whatsapp-link"
+                        data-plan="Plan online" target="_blank" rel="noopener noreferrer">
+                        Elegir este plan
                     </a>
-
                 </article>
-
             </div>
         </section>
 
-        <!-- SOBRE EL ENTRENADOR -->
         <section class="about section" id="sobre-mi">
-
-            <div class="about-mark">IF.</div>
-
+            <div class="about-mark" aria-hidden="true">IF.</div>
             <div class="about-content">
-                <p class="eyebrow">SOBRE EL ENTRENADOR</p>
-
-                <h2>Tu objetivo merece un plan.</h2>
-
-                <p>
-                    Cada persona empieza desde un lugar diferente.
-                    Mi enfoque es ayudarte a construir hábitos,
-                    entrenar con intención y mantener un progreso
-                    que puedas sostener.
+                <p class="eyebrow" id="about-eyebrow">SOBRE EL ENTRENADOR</p>
+                <h2 id="about-title">Tu objetivo merece un plan.</h2>
+                <p id="about-description">
+                    Cada persona empieza desde un lugar diferente. Mi enfoque
+                    es ayudarte a construir hábitos, entrenar con intención
+                    y mantener un progreso que puedas sostener.
                 </p>
-
-                <p>
-                    Esta sección se personalizará con la experiencia,
-                    formación y especialidades reales del profesional.
+                <p id="about-extra">
+                    Conocé mi enfoque de trabajo y encontremos una modalidad
+                    que se adapte a tus objetivos.
                 </p>
-
-                <a href="#contacto" class="text-link">
-                    Hablemos de tus objetivos →
-                </a>
+                <a href="#contacto" class="text-link">Hablemos de tus objetivos →</a>
             </div>
-
         </section>
 
-        <!-- CONTACTO -->
-    
-<section class="contact section" id="contacto">
-    <div class="contact-content">
-        <p class="eyebrow">TU PRÓXIMO PASO</p>
+        <section class="contact section" id="contacto">
+            <div class="contact-content">
+                <p class="eyebrow">TU PRÓXIMO PASO</p>
+                <h2 id="contact-title">¿Empezamos?</h2>
+                <p id="contact-description">
+                    Contame qué querés lograr y consultá qué modalidad puede adaptarse a vos.
+                </p>
 
-        <h2>¿Empezamos?</h2>
+                <p class="contact-email">
+                    Email:
+                    <button type="button" id="copy-email" class="email-link">contacto@ejemplo.com</button>
+                    <span id="email-feedback" aria-live="polite"></span>
+                </p>
 
-        <p>
-            Contame qué querés lograr y consultá qué modalidad
-            de entrenamiento puede adaptarse a vos.
-        </p>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="nombre">Tu nombre</label>
+                        <input type="text" id="nombre" name="nombre"
+                            placeholder="Ej.: Juan" autocomplete="name"
+                            maxlength="80" required>
+                    </div>
 
-        <form id="contact-form" class="contact-form">
-            <div class="form-group">
-                <label for="nombre">Tu nombre</label>
-                <input
-                    type="text"
-                    id="nombre"
-                    name="nombre"
-                    placeholder="Ej.: Franco"
-                    required
-                >
+                    <div class="form-group">
+                        <label for="modalidad">¿Qué entrenamiento te interesa?</label>
+                        <select id="modalidad" name="modalidad" required>
+                            <option value="">Elegí una opción</option>
+                            <option value="Plan inicial">Plan inicial</option>
+                            <option value="Plan personalizado">Plan personalizado</option>
+                            <option value="Plan online">Plan online</option>
+                            <option value="Quiero recibir asesoramiento">Necesito asesoramiento</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="objetivo">¿Cuál es tu objetivo? (opcional)</label>
+                        <textarea id="objetivo" name="objetivo" rows="3"
+                            maxlength="500"
+                            placeholder="Ej.: ganar fuerza, mejorar mi estado físico..."></textarea>
+                    </div>
+
+                    <button type="submit" class="button button-primary">
+                        Continuar por WhatsApp
+                    </button>
+                    <p id="form-feedback" class="form-feedback" aria-live="polite"></p>
+                </form>
+
+                <p class="contact-note" id="contact-note">
+                    Recordá configurar el número de WhatsApp antes de publicar el sitio.
+                </p>
             </div>
+        </section>
+    </main>
 
-            <div class="form-group">
-                <label for="modalidad">¿Qué entrenamiento te interesa?</label>
-                <select id="modalidad" name="modalidad" required>
-                    <option value="">Elegí una opción</option>
-                    <option value="Plan inicial">Plan inicial</option>
-                    <option value="Plan personalizado">Plan personalizado</option>
-                    <option value="Plan online">Plan online</option>
-                    <option value="Quiero recibir asesoramiento">No estoy seguro, necesito asesoramiento</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="objetivo">¿Cuál es tu objetivo? (opcional)</label>
-                <textarea
-                    id="objetivo"
-                    name="objetivo"
-                    rows="3"
-                    placeholder="Ej.: ganar fuerza, mejorar mi estado físico..."
-                ></textarea>
-            </div>
-
-            <button type="submit" class="button button-primary">
-                Continuar por WhatsApp
-            </button>
-        </form>
-
-        <p class="contact-note">
-            Sitio de demostración. El número de WhatsApp
-            debe reemplazarse por el del profesional.
-        </p>
-    </div>
-</section>
-
-    <!-- PIE DE PÁGINA -->
     <footer class="footer">
-
-        <a href="#inicio" class="logo">IMPULSO<span>.</span></a>
-
-        <p>
-            © <span id="current-year"></span>
-            Impulso Fitness. Sitio de demostración.
-        </p>
-
-        <a href="#inicio" class="back-to-top">
-            Volver arriba ↑
+        <a href="#inicio" class="logo">
+            <span class="business-name">Impulso Fitness</span><span class="logo-dot">.</span>
         </a>
-
+        <p>© <span id="current-year"></span> <span class="business-name">Impulso Fitness</span>. Todos los derechos reservados.</p>
+        <a href="#inicio" class="back-to-top">Volver arriba ↑</a>
     </footer>
 
+    <button type="button" class="back-to-top-floating" id="back-to-top-floating"
+        aria-label="Volver arriba">↑</button>
 </body>
 </html>
